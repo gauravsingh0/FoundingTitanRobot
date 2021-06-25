@@ -471,7 +471,7 @@ async def handler(event):
         return
     reply_message = await event.get_reply_message()
     if not reply_message.media:
-        await event.reply("Reply to an image or a sticker.```")
+        await event.reply("Reply to an image or a sticker to memeify it,nigga")
         return
     file = await bot.download_media(reply_message)
     msg = await event.reply("Memifying this image! Please wait")
