@@ -4,7 +4,10 @@ import os
 import re
 import urllib
 import urllib.request
-
+from search_engine_parser import GoogleSearch
+import urllib
+from urllib.error import URLError, HTTPError
+from bs4 import BeautifulSoup
 import requests
 from bing_image_downloader import downloader
 from bs4 import BeautifulSoup
