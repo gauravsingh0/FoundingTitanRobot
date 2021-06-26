@@ -26,7 +26,7 @@ requests
 spamwatch
 speedtest-cli
 spongemock
-sqlalchemy==1.4.19
+sqlalchemy
 telethon==1.16.4
 ujson
 wikipedia
