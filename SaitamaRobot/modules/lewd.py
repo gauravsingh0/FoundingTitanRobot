@@ -14,7 +14,6 @@ from SaitamaRobot.modules.helper_funcs.filters import CustomFilters
 from SaitamaRobot.modules.helper_funcs.chat_status import user_admin
 from telegram.utils.helpers import mention_html, mention_markdown, escape_markdown
 
-@run_async
 @user_admin
 @gloggable
 def add_nsfw(update: Update, context: CallbackContext):
@@ -36,7 +35,6 @@ def add_nsfw(update: Update, context: CallbackContext):
         return ""
 
 
-@run_async
 @user_admin
 @gloggable
 def rem_nsfw(update: Update, context: CallbackContext):
@@ -57,7 +55,7 @@ def rem_nsfw(update: Update, context: CallbackContext):
         )
         return message
 
-@run_async
+
 def list_nsfw_chats(update: Update, context: CallbackContext):
     chats = sql.get_all_nsfw_chats()
     text = "<b>NSFW Activated Chats</b>\n"
@@ -75,14 +73,12 @@ def list_nsfw_chats(update: Update, context: CallbackContext):
     update.effective_message.reply_text(text, parse_mode="HTML")
 
 
-@run_async
 def neko(update, context):
     msg = update.effective_message
     target = "neko"
     msg.reply_photo(nekos.img(target))
 
 
-@run_async
 def feet(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -93,7 +89,6 @@ def feet(update, context):
     target = "feet"
     msg.reply_photo(nekos.img(target))
 
-@run_async
 def yuri(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -104,7 +99,6 @@ def yuri(update, context):
     target = "yuri"
     msg.reply_photo(nekos.img(target))
 
-@run_async
 def trap(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -115,7 +109,6 @@ def trap(update, context):
     target = "trap"
     msg.reply_photo(nekos.img(target))
 
-@run_async
 def futanari(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -126,7 +119,6 @@ def futanari(update, context):
     target = "futanari"
     msg.reply_photo(nekos.img(target))
 
-@run_async
 def hololewd(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -137,7 +129,6 @@ def hololewd(update, context):
     target = "hololewd"
     msg.reply_photo(nekos.img(target))
 
-@run_async
 def lewdkemo(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -149,7 +140,6 @@ def lewdkemo(update, context):
     msg.reply_photo(nekos.img(target))
 
 
-@run_async
 def sologif(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -161,7 +151,6 @@ def sologif(update, context):
     msg.reply_video(nekos.img(target))
 
 
-@run_async
 def feetgif(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -172,7 +161,6 @@ def feetgif(update, context):
     target = "feetg"
     msg.reply_video(nekos.img(target))
 
-@run_async
 def cumgif(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -183,7 +171,6 @@ def cumgif(update, context):
     target = "cum"
     msg.reply_video(nekos.img(target))
 
-@run_async
 def erokemo(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -194,7 +181,6 @@ def erokemo(update, context):
     target = "erokemo"
     msg.reply_photo(nekos.img(target))
 
-@run_async
 def lesbian(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -205,13 +191,11 @@ def lesbian(update, context):
     target = "les"
     msg.reply_video(nekos.img(target))
 
-@run_async
 def wallpaper(update, context):
     msg = update.effective_message
     target = "wallpaper"
     msg.reply_photo(nekos.img(target))
 
-@run_async
 def lewdk(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -222,7 +206,6 @@ def lewdk(update, context):
     target = "lewdk"
     msg.reply_photo(nekos.img(target))
 
-@run_async
 def ngif(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -234,13 +217,11 @@ def ngif(update, context):
     msg.reply_video(nekos.img(target))
 
 
-@run_async
 def tickle(update, context):
      msg = update.effective_message
      target = "tickle"
      msg.reply_video(nekos.img(target))
 
-@run_async
 def lewd(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -252,14 +233,12 @@ def lewd(update, context):
     msg.reply_photo(nekos.img(target))
 
 
-@run_async
 def feed(update, context):
     msg = update.effective_message
     target = "feed"
     msg.reply_video(nekos.img(target))
 
 
-@run_async
 def eroyuri(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -270,7 +249,6 @@ def eroyuri(update, context):
     target = "eroyuri"
     msg.reply_photo(nekos.img(target))
 
-@run_async
 def eron(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -281,7 +259,6 @@ def eron(update, context):
     target = "eron"
     msg.reply_photo(nekos.img(target))
 
-@run_async
 def cum(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -292,7 +269,6 @@ def cum(update, context):
     target = "cum_jpg"
     msg.reply_photo(nekos.img(target))
 
-@run_async
 def bjgif(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -303,7 +279,6 @@ def bjgif(update, context):
     target = "bj"
     msg.reply_video(nekos.img(target))
 
-@run_async
 def bj(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -314,7 +289,6 @@ def bj(update, context):
     target = "blowjob"
     msg.reply_photo(nekos.img(target))
 
-@run_async
 def nekonsfw(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -325,7 +299,6 @@ def nekonsfw(update, context):
     target = "nsfw_neko_gif"
     msg.reply_video(nekos.img(target))
 
-@run_async
 def solo(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -336,7 +309,6 @@ def solo(update, context):
     target = "solo"
     msg.reply_photo(nekos.img(target))
 
-@run_async
 def kemonomimi(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -347,7 +319,6 @@ def kemonomimi(update, context):
     target = "kemonomimi"
     msg.reply_photo(nekos.img(target))
 
-@run_async
 def avatarlewd(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -363,7 +334,6 @@ def avatarlewd(update, context):
     msg.reply_document(open("temp.webp", "rb"))
     os.remove("temp.webp")
 
-@run_async
 def gasm(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -380,14 +350,12 @@ def gasm(update, context):
     os.remove("temp.webp")
 
 
-@run_async
 def poke(update, context):
     msg = update.effective_message
     target = "poke"
     msg.reply_video(nekos.img(target))
 
 
-@run_async
 def anal(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -398,7 +366,6 @@ def anal(update, context):
     target = "anal"
     msg.reply_video(nekos.img(target))
 
-@run_async
 def hentai(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -409,7 +376,6 @@ def hentai(update, context):
     target = "hentai"
     msg.reply_photo(nekos.img(target))
 
-@run_async
 def avatar(update, context):
     msg = update.effective_message
     target = "nsfw_avatar"
@@ -420,7 +386,6 @@ def avatar(update, context):
     msg.reply_document(open("temp.webp", "rb"))
     os.remove("temp.webp")
 
-@run_async
 def erofeet(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -431,13 +396,11 @@ def erofeet(update, context):
     target = "erofeet"
     msg.reply_photo(nekos.img(target))
 
-@run_async
 def holo(update, context):
     msg = update.effective_message
     target = "holo"
     msg.reply_photo(nekos.img(target))
 
-@run_async
 def keta(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -451,7 +414,6 @@ def keta(update, context):
         return
     msg.reply_photo(nekos.img(target))
 
-@run_async
 def pussygif(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -462,7 +424,6 @@ def pussygif(update, context):
     target = "pussy"
     msg.reply_video(nekos.img(target))
 
-@run_async
 def tits(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -473,7 +434,6 @@ def tits(update, context):
     target = "tits"
     msg.reply_photo(nekos.img(target))
 
-@run_async
 def holoero(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -484,7 +444,6 @@ def holoero(update, context):
     target = "holoero"
     msg.reply_photo(nekos.img(target))
 
-@run_async
 def pussy(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -495,7 +454,6 @@ def pussy(update, context):
     target = "pussy_jpg"
     msg.reply_photo(nekos.img(target))
 
-@run_async
 def hentaigif(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -506,7 +464,6 @@ def hentaigif(update, context):
     target = "random_hentai_gif"
     msg.reply_video(nekos.img(target))
 
-@run_async
 def classic(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -517,7 +474,6 @@ def classic(update, context):
     target = "classic"
     msg.reply_video(nekos.img(target))
 
-@run_async
 def kuni(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -529,7 +485,6 @@ def kuni(update, context):
     msg.reply_video(nekos.img(target))
 
 
-@run_async
 def waifu(update, context):
     msg = update.effective_message
     target = "waifu"
@@ -541,14 +496,13 @@ def waifu(update, context):
     os.remove("temp.webp")
 
 
-@run_async
 def kiss(update, context):
     msg = update.effective_message
     target = "kiss"
     msg.reply_video(nekos.img(target))
 
 
-@run_async
+
 def femdom(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -560,19 +514,19 @@ def femdom(update, context):
     msg.reply_photo(nekos.img(target))
 
 
-@run_async
+
 def hug(update, context):
     msg = update.effective_message
     target = "cuddle"
     msg.reply_video(nekos.img(target))
 
-@run_async
+
 def cuddle(update, context):
     msg = update.effective_message
     target = "cuddle"
     msg.reply_video(nekos.img(target))
 
-@run_async
+
 def erok(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -584,7 +538,7 @@ def erok(update, context):
     msg.reply_photo(nekos.img(target))
 
 
-@run_async
+
 def foxgirl(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -596,7 +550,7 @@ def foxgirl(update, context):
     msg.reply_photo(nekos.img(target))
 
 
-@run_async
+
 def titsgif(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -608,7 +562,7 @@ def titsgif(update, context):
     msg.reply_video(nekos.img(target))
 
 
-@run_async
+
 def ero(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -620,21 +574,20 @@ def ero(update, context):
     msg.reply_photo(nekos.img(target))
 
 
-@run_async
+
 def smug(update, context):
     msg = update.effective_message
     target = "smug"
     msg.reply_video(nekos.img(target))
 
 
-@run_async
+
 def baka(update, context):
     msg = update.effective_message
     target = "baka"
     msg.reply_video(nekos.img(target))
 
 
-@run_async
 def dva(update, context):
     chat_id = update.effective_chat.id
     if not update.effective_message.chat.type == "private":
@@ -650,63 +603,63 @@ def dva(update, context):
         return
     msg.reply_photo(url)
 
-ADD_NSFW_HANDLER = CommandHandler("addnsfw", add_nsfw)
-REMOVE_NSFW_HANDLER = CommandHandler("rmnsfw", rem_nsfw)
+ADD_NSFW_HANDLER = CommandHandler("addnsfw", add_nsfw, run_async=True)
+REMOVE_NSFW_HANDLER = CommandHandler("rmnsfw", rem_nsfw, run_async=True)
 LIST_NSFW_CHATS_HANDLER = CommandHandler(
-    "nsfwchats", list_nsfw_chats, filters=CustomFilters.dev_filter)
-LEWDKEMO_HANDLER = CommandHandler("lewdkemo", lewdkemo)
-NEKO_HANDLER = CommandHandler("neko", neko)
-FEET_HANDLER = CommandHandler("feet", feet)
-YURI_HANDLER = CommandHandler("yuri", yuri)
-TRAP_HANDLER = CommandHandler("trap", trap)
-FUTANARI_HANDLER = CommandHandler("futanari", futanari)
-HOLOLEWD_HANDLER = CommandHandler("hololewd", hololewd)
-SOLOGIF_HANDLER = CommandHandler("sologif", sologif)
-CUMGIF_HANDLER = CommandHandler("cumgif", cumgif)
-EROKEMO_HANDLER = CommandHandler("erokemo", erokemo)
-LESBIAN_HANDLER = CommandHandler("lesbian", lesbian)
-WALLPAPER_HANDLER = CommandHandler("wallpaper", wallpaper)
-LEWDK_HANDLER = CommandHandler("lewdk", lewdk)
-NGIF_HANDLER = CommandHandler("ngif", ngif)
-TICKLE_HANDLER = CommandHandler("tickle", tickle)
-LEWD_HANDLER = CommandHandler("lewd", lewd)
-FEED_HANDLER = CommandHandler("feed", feed)
-EROYURI_HANDLER = CommandHandler("eroyuri", eroyuri)
-ERON_HANDLER = CommandHandler("eron", eron)
-CUM_HANDLER = CommandHandler("cum", cum)
-BJGIF_HANDLER = CommandHandler("bjgif", bjgif)
-BJ_HANDLER = CommandHandler("bj", bj)
-NEKONSFW_HANDLER = CommandHandler("nekonsfw", nekonsfw)
-SOLO_HANDLER = CommandHandler("solo", solo)
-KEMONOMIMI_HANDLER = CommandHandler("kemonomimi", kemonomimi)
-AVATARLEWD_HANDLER = CommandHandler("avatarlewd", avatarlewd)
-GASM_HANDLER = CommandHandler("gasm", gasm)
-POKE_HANDLER = CommandHandler("poke", poke)
-ANAL_HANDLER = CommandHandler("anal", anal)
-HENTAI_HANDLER = CommandHandler("hentai", hentai)
-AVATAR_HANDLER = CommandHandler("avatar", avatar)
-EROFEET_HANDLER = CommandHandler("erofeet", erofeet)
-HOLO_HANDLER = CommandHandler("holo", holo)
-TITS_HANDLER = CommandHandler("tits", tits)
-PUSSYGIF_HANDLER = CommandHandler("pussygif", pussygif)
-HOLOERO_HANDLER = CommandHandler("holoero", holoero)
-PUSSY_HANDLER = CommandHandler("pussy", pussy)
-HENTAIGIF_HANDLER = CommandHandler("hentaigif", hentaigif)
-CLASSIC_HANDLER = CommandHandler("classic", classic)
-KUNI_HANDLER = CommandHandler("kuni", kuni)
-WAIFU_HANDLER = CommandHandler("waifu", waifu)
-LEWD_HANDLER = CommandHandler("lewd", lewd)
-KISS_HANDLER = CommandHandler("kiss", kiss)
-FEMDOM_HANDLER = CommandHandler("femdom", femdom)
-CUDDLE_HANDLER = CommandHandler("cuddle", cuddle)
-HUG_HANDLER = CommandHandler("hug", hug)
-EROK_HANDLER = CommandHandler("erok", erok)
-FOXGIRL_HANDLER = CommandHandler("foxgirl", foxgirl)
-TITSGIF_HANDLER = CommandHandler("titsgif", titsgif)
-ERO_HANDLER = CommandHandler("ero", ero)
-SMUG_HANDLER = CommandHandler("smug", smug)
-BAKA_HANDLER = CommandHandler("baka", baka)
-DVA_HANDLER = CommandHandler("dva", dva)
+    "nsfwchats", list_nsfw_chats, filters=CustomFilters.dev_filter, run_async=True)
+LEWDKEMO_HANDLER = CommandHandler("lewdkemo", lewdkemo, run_async=True)
+NEKO_HANDLER = CommandHandler("neko", neko, run_async=True)
+FEET_HANDLER = CommandHandler("feet", feet, run_async=True)
+YURI_HANDLER = CommandHandler("yuri", yuri, run_async=True)
+TRAP_HANDLER = CommandHandler("trap", trap, run_async=True)
+FUTANARI_HANDLER = CommandHandler("futanari", futanari, run_async=True)
+HOLOLEWD_HANDLER = CommandHandler("hololewd", hololewd, run_async=True)
+SOLOGIF_HANDLER = CommandHandler("sologif", sologif, run_async=True)
+CUMGIF_HANDLER = CommandHandler("cumgif", cumgif, run_async=True)
+EROKEMO_HANDLER = CommandHandler("erokemo", erokemo, run_async=True)
+LESBIAN_HANDLER = CommandHandler("lesbian", lesbian, run_async=True)
+WALLPAPER_HANDLER = CommandHandler("wallpaper", wallpaper, run_async=True)
+LEWDK_HANDLER = CommandHandler("lewdk", lewdk, run_async=True)
+NGIF_HANDLER = CommandHandler("ngif", ngif, run_async=True)
+TICKLE_HANDLER = CommandHandler("tickle", tickle, run_async=True)
+LEWD_HANDLER = CommandHandler("lewd", lewd, run_async=True)
+FEED_HANDLER = CommandHandler("feed", feed, run_async=True)
+EROYURI_HANDLER = CommandHandler("eroyuri", eroyuri, run_async=True)
+ERON_HANDLER = CommandHandler("eron", eron, run_async=True)
+CUM_HANDLER = CommandHandler("cum", cum, run_async=True)
+BJGIF_HANDLER = CommandHandler("bjgif", bjgif, run_async=True)
+BJ_HANDLER = CommandHandler("bj", bj, run_async=True)
+NEKONSFW_HANDLER = CommandHandler("nekonsfw", nekonsfw, run_async=True)
+SOLO_HANDLER = CommandHandler("solo", solo, run_async=True)
+KEMONOMIMI_HANDLER = CommandHandler("kemonomimi", kemonomimi, run_async=True)
+AVATARLEWD_HANDLER = CommandHandler("avatarlewd", avatarlewd, run_async=True)
+GASM_HANDLER = CommandHandler("gasm", gasm, run_async=True)
+POKE_HANDLER = CommandHandler("poke", poke, run_async=True)
+ANAL_HANDLER = CommandHandler("anal", anal, run_async=True)
+HENTAI_HANDLER = CommandHandler("hentai", hentai, run_async=True)
+AVATAR_HANDLER = CommandHandler("avatar", avatar, run_async=True)
+EROFEET_HANDLER = CommandHandler("erofeet", erofeet, run_async=True)
+HOLO_HANDLER = CommandHandler("holo", holo, run_async=True)
+TITS_HANDLER = CommandHandler("tits", tits, run_async=True)
+PUSSYGIF_HANDLER = CommandHandler("pussygif", pussygif, run_async=True)
+HOLOERO_HANDLER = CommandHandler("holoero", holoero, run_async=True)
+PUSSY_HANDLER = CommandHandler("pussy", pussy, run_async=True)
+HENTAIGIF_HANDLER = CommandHandler("hentaigif", hentaigif, run_async=True)
+CLASSIC_HANDLER = CommandHandler("classic", classic, run_async=True)
+KUNI_HANDLER = CommandHandler("kuni", kuni, run_async=True)
+WAIFU_HANDLER = CommandHandler("waifu", waifu, run_async=True)
+LEWD_HANDLER = CommandHandler("lewd", lewd, run_async=True)
+KISS_HANDLER = CommandHandler("kiss", kiss, run_async=True)
+FEMDOM_HANDLER = CommandHandler("femdom", femdom, run_async=True)
+CUDDLE_HANDLER = CommandHandler("cuddle", cuddle, run_async=True)
+HUG_HANDLER = CommandHandler("hug", hug, run_async=True)
+EROK_HANDLER = CommandHandler("erok", erok, run_async=True)
+FOXGIRL_HANDLER = CommandHandler("foxgirl", foxgirl, run_async=True)
+TITSGIF_HANDLER = CommandHandler("titsgif", titsgif, run_async=True)
+ERO_HANDLER = CommandHandler("ero", ero, run_async=True)
+SMUG_HANDLER = CommandHandler("smug", smug, run_async=True)
+BAKA_HANDLER = CommandHandler("baka", baka, run_async=True)
+DVA_HANDLER = CommandHandler("dva", dva, run_async=True)
 
 
 dispatcher.add_handler(ADD_NSFW_HANDLER)
