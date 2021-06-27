@@ -19,8 +19,9 @@ from aiohttp import ClientSession
 StartTime = time.time()
 
 # enable logging
+FORMAT = "[FoundingTitanRobot] %(message)s"
 logging.basicConfig(
-    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    format=FORMAT,
     handlers=[logging.FileHandler("log.txt"), logging.StreamHandler()],
     level=logging.INFO,
 )
@@ -66,7 +67,7 @@ if ENV:
     try:
         TIGERS = set(int(x) for x in os.environ.get("SCOUTS", "").split())
     except ValueError:
-        raise Exception("Your tiger users list does not contain valid integers.")
+        raise Exception("Your scout users list does not contain valid integers.")
 
     INFOPIC = bool(os.environ.get("INFOPIC", False))
     EVENT_LOGS = os.environ.get("EVENT_LOGS", None)
@@ -140,7 +141,7 @@ else:
     try:
         TIGERS = set(int(x) for x in Config.SCOUTS or [])
     except ValueError:
-        raise Exception("Your tiger users list does not contain valid integers.")
+        raise Exception("Your scout users list does not contain valid integers.")
 
     EVENT_LOGS = Config.EVENT_LOGS
     WEBHOOK = Config.WEBHOOK
