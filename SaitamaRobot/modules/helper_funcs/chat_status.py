@@ -139,7 +139,7 @@ def sudo_plus(func):
                 pass
         else:
             update.effective_message.reply_text(
-                "Atleat be an Admin to use these all Commands",
+                "Atleast be an Admin to use these all Commands",
             )
 
     return is_sudo_plus_func
@@ -200,7 +200,7 @@ def user_admin(func):
                 pass
         else:
             update.effective_message.reply_text(
-                "At Leaste be an Admin to use these all Commands",
+                "Atleast be an Admin to use these all Commands",
             )
 
     return is_admin
