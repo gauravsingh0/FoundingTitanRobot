@@ -19,9 +19,8 @@ from aiohttp import ClientSession
 StartTime = time.time()
 
 # enable logging
-FORMAT = "[FoundingTitanRobot] %(message)s"
 logging.basicConfig(
-    format=FORMAT,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     handlers=[logging.FileHandler("log.txt"), logging.StreamHandler()],
     level=logging.INFO,
 )
