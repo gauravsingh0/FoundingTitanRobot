@@ -41,7 +41,8 @@ Eren is a simple bot for making your group management easier and cool.
 * Should you be forking this repo then do not forget to star it - <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/sasukeuchiha912/FoundingTitanRobot?color=white&label=%F0%9F%8C%9F%20star">
 
 ## Credits 
-* Paul larsen and Saitama's Developers
+* This is the original work of [Paul larsen](https://github.com/PaulSonOfLars) and is modified and reworked by [Kaizoku](https://github.com/AnimeKaizoku)
+* If Anything is missing here Feel free to open pull requests.
 
 ## Deploy 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/sasukeuchiha912/FoundingTitanRobot)
