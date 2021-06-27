@@ -748,7 +748,7 @@ def goodbye(update: Update, context: CallbackContext):
             )
 
 
-@run_async
+
 @user_admin
 @loggable
 def set_welcome(update: Update, context: CallbackContext) -> str:
