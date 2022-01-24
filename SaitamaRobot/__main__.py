@@ -107,7 +107,7 @@ buttons = [
 ] 
 
 HELP_STRINGS = """
-Hey there, I'm Eren Jaeger!
+Hey there ! My name is  *{dispatcher.bot.first_name}*.
 To make me functional, make sure that i have enough rights in your group.
 Helpful commands:
 - /start: Starts me! You've probably already used this.
