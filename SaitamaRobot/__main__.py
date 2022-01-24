@@ -90,23 +90,18 @@ Click help button to know my commands!
 buttons = [
     [
         InlineKeyboardButton(
-              text="❔ Help",
+              text="❔ Help".
+              callback_data="help_back",
+       ),
         InlineKeyboardButton(
-              text="⚙️ Help", callback_data="help_back"),   
-   ],
-    [      
-       InlineKeyboardButton(
-            text="📖 Quick Setup", url="https://t.me/foundingtitanupdates/4"),        
-          InlineKeyboardButton(
-            text="📋 ChangeLogs", url="https://t.me/FoundingTitanupdates"),
-    
-   ],
-    [      
-          InlineKeyboardButton(
-            text="🗣️ Support", url="https://t.me/Foundingtitansupport"),
-          InlineKeyboardButton(
-            text="🌐 Nexus Network", url="https://t.me/Nexus_Network",
-    
+              text="Updates",
+              url="https://t.me/IDNCoder",
+       ),
+    ],
+    [
+        InlineKeyboardButton(
+              text="Add Zeldris to Your Group 👥"
+              url="t.me/ZeldrisRobot?startgroup=true",
          ),
     ],
 ] 
