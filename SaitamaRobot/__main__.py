@@ -78,7 +78,15 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hey there! my name is *{}*. A modular group management bot with useful features. [ㅤ](https://telegra.ph/file/fed9ba09e9add9b197c21.png)◑ *Uptime:* {}◑ {} *Users, across* {} *chats.*Any issues or need help related to me?Join our official group [IDNCoderX](https://t.me/IDNCoderX).Click help button to know my commands!"""
+Hey there! my name is *{}*.
+A modular group management bot with usefull features.[ ]()
+
+◑ *Uptime:* `{}`
+◑ `{}` *Users, across* `{}` *chats.*
+
+Join our official group [ ]( ).
+Click help button to know my commands!
+"""
 buttons = [
     [
         InlineKeyboardButton(
