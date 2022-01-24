@@ -90,7 +90,7 @@ Click help button to know my commands!
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕ Add Me", url="t.me/FoundingTitanRobot?startgroup=true"),    
+              text="❔ Help",
         InlineKeyboardButton(
               text="⚙️ Help", callback_data="help_back"),   
    ],
